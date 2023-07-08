@@ -9,23 +9,23 @@ import UIKit
 
 class ViewController: UIViewController {
     //MARK: Variables
-    var currentValue = 50
+    var currentValue = 0
     var targetValue = 0
-    var round = 1
+    var round = 0
+    var totalScore = 0
+    
     //MARK: Outlets
-
     @IBOutlet var slider: UISlider!
     @IBOutlet var scoreLbl: UILabel!
-    
     @IBOutlet var targetLbl: UILabel!
     @IBOutlet var roundLbl: UILabel!
-    //MARK: Functions
+    
+    //MARK: Function
     override func viewDidLoad() {
         super.viewDidLoad()
         startNewRound()
     }
     
-    //MARK: Functions
     func startNewRound(){
         targetValue = Int.random(in: 1...100)
         currentValue = 50
@@ -35,6 +35,8 @@ class ViewController: UIViewController {
 
     func updateLabels(){
         targetLbl.text = String(targetValue)
+        scoreLbl.text = String(totalScore)
+        roundLbl.text = String(round)
     }
 
     //MARK: Actions
@@ -49,8 +51,16 @@ class ViewController: UIViewController {
     
     @IBAction func hitMeButtonTapped(_ slider: UIButton) {
         
-        let message = "The value of slider is \(currentValue)" +
-                      "\n The target value is \(targetValue)"
+        
+        //Difference Calculator, abs mean is absolute value (mutlak deger)
+        let differenceTargetCurrent = abs(currentValue - targetValue)
+        
+        let points = 100 - differenceTargetCurrent
+        
+        totalScore += points
+        
+        let message = "Your score point is \(points)" +
+                      "\n Total score is \(totalScore)"
         
         let alert = UIAlertController(title: "Title", message: message, preferredStyle: .alert)
             
@@ -61,10 +71,13 @@ class ViewController: UIViewController {
         
         round += 1
         if round == 5 {
+            
+            let alert = UIAlertAction(title: "GAME OVER", style: .default)
             print("Game Over")
         }
+        
         startNewRound()
+        
     }
-    
 }
 
