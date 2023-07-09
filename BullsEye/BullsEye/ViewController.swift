@@ -59,12 +59,24 @@ class ViewController: UIViewController {
         
         totalScore += points
         
+        var title: String
+        if differenceTargetCurrent == 0 {
+            title = "Perfect"
+        } else if differenceTargetCurrent < 10 {
+            title = "Very Close"
+        } else if differenceTargetCurrent < 20 {
+            title = "Not Bad"
+        } else {
+            title = "Not even close"
+        }
+        
+
         let message = "Your score point is \(points)" +
                       "\n Total score is \(totalScore)"
         
-        let alert = UIAlertController(title: "Title", message: message, preferredStyle: .alert)
+                let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
             
-        let action = UIAlertAction(title: "TitleAction", style: .default)
+        let action = UIAlertAction(title: "OK", style: .default)
         
         alert.addAction(action)
         present(alert, animated: true)
@@ -76,6 +88,9 @@ class ViewController: UIViewController {
             print("Game Over")
         }
         
+        
+        
+       
         startNewRound()
         
     }
