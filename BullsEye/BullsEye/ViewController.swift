@@ -52,16 +52,27 @@ class ViewController: UIViewController {
     @IBAction func hitMeButtonTapped(_ slider: UIButton) {
         
         
+        if round >= 5 {
+            
+            var alert = UIAlertController(title: "GAME OVER", message: "You Should Restart The Game", preferredStyle: .actionSheet)
+            print("Game Over")
+            
+            present(alert, animated: true)
+        }
+        
         //Difference Calculator, abs mean is absolute value (mutlak deger)
         let differenceTargetCurrent = abs(currentValue - targetValue)
         
-        let points = 100 - differenceTargetCurrent
+        var points = 100 - differenceTargetCurrent
         
-        totalScore += points
+        
         
         var title: String
+        
         if differenceTargetCurrent == 0 {
             title = "Perfect"
+            points += 100
+            print("User deserved extra 100 points")
         } else if differenceTargetCurrent < 10 {
             title = "Very Close"
         } else if differenceTargetCurrent < 20 {
@@ -70,28 +81,23 @@ class ViewController: UIViewController {
             title = "Not even close"
         }
         
-
-        let message = "Your score point is \(points)" +
-                      "\n Total score is \(totalScore)"
+        totalScore += points
         
-                let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
-            
-        let action = UIAlertAction(title: "OK", style: .default)
+        let message = "Your score in this round \(points)" +
+        "\n Your guess \(currentValue)" +
+        "\n Total score is \(totalScore)"
+        
+        var alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        
+        let action = UIAlertAction(title: "OK", style: .default, handler: { _ in
+            self.startNewRound()
+        })
         
         alert.addAction(action)
         present(alert, animated: true)
         
         round += 1
-        if round == 5 {
-            
-            let alert = UIAlertAction(title: "GAME OVER", style: .default)
-            print("Game Over")
-        }
-        
-        
-        
-       
-        startNewRound()
+    
         
     }
 }
