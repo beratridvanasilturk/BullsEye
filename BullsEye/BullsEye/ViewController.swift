@@ -19,6 +19,7 @@ class ViewController: UIViewController {
     @IBOutlet var scoreLbl: UILabel!
     @IBOutlet var targetLbl: UILabel!
     @IBOutlet var roundLbl: UILabel!
+    @IBOutlet var hitMeButtonOutlet: UIButton!
     
     //MARK: Function
     override func viewDidLoad() {
@@ -41,6 +42,14 @@ class ViewController: UIViewController {
 
     //MARK: Actions
     @IBAction func startOverButtonTapped(_ sender: UIButton) {
+        
+        
+            
+            round = 0
+            totalScore = 0
+            currentValue = 0
+            
+        
     }
     @IBAction func infoButtonTapped(_ sender: UIButton) {
     }
@@ -51,14 +60,6 @@ class ViewController: UIViewController {
     
     @IBAction func hitMeButtonTapped(_ slider: UIButton) {
         
-        
-        if round >= 5 {
-            
-            var alert = UIAlertController(title: "GAME OVER", message: "You Should Restart The Game", preferredStyle: .actionSheet)
-            print("Game Over")
-            
-            present(alert, animated: true)
-        }
         
         //Difference Calculator, abs mean is absolute value (mutlak deger)
         let differenceTargetCurrent = abs(currentValue - targetValue)
@@ -97,6 +98,13 @@ class ViewController: UIViewController {
         present(alert, animated: true)
         
         round += 1
+        
+        if round == 3 {
+            action.isEnabled = false
+            hitMeButtonOutlet.isEnabled = false
+            let action = UIAlertAction(title: "Restart The Game", style: .cancel)
+            alert.addAction(action)
+        }
     
         
     }
