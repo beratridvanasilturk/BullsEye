@@ -1,11 +1,11 @@
 {
   "images" : [
     {
+      "filename" : "informacion.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "Tablica-dart-z-lotkami-w-180-15.06.2023-1140x758.jpg",
       "idiom" : "universal",
       "scale" : "2x"
     },

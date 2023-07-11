@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina6_12" orientation="landscape" appearance="light"/>
+    <device id="retina6_1" orientation="landscape" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -13,14 +13,14 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="BullsEye" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="852" height="393"/>
+                        <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dart" translatesAutoresizingMaskIntoConstraints="NO" id="ao2-D2-qI5">
-                                <rect key="frame" x="-164.66666666666663" y="-788.66666666666663" width="1181.3333333333333" height="1181.6666666666667"/>
+                                <rect key="frame" x="-143" y="-767.5" width="1182" height="1181.5"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MAC-DJ-pEw">
-                                <rect key="frame" x="369" y="237.66666666666666" width="114.33333333333331" height="49.666666666666657"/>
+                                <rect key="frame" x="391" y="258" width="114.5" height="50"/>
                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Hit Me" cornerStyle="capsule">
@@ -35,16 +35,16 @@
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="ufo-SU-iOy" userLabel="Score Stack View">
-                                <rect key="frame" x="35.999999999999993" y="357.66666666666669" width="97.333333333333314" height="20.333333333333314"/>
+                                <rect key="frame" x="36" y="378.5" width="97.5" height="20.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Score:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="noM-fW-gzh">
-                                        <rect key="frame" x="0.0" y="0.0" width="49" height="20.333333333333332"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="49" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Score" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="otq-Uo-aLw">
-                                        <rect key="frame" x="53" y="0.0" width="44.333333333333343" height="20.333333333333332"/>
+                                        <rect key="frame" x="53" y="0.0" width="44.5" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
@@ -52,7 +52,7 @@
                                 </subviews>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4bb-SA-BwX">
-                                <rect key="frame" x="375" y="350.66666666666669" width="102" height="34.333333333333314"/>
+                                <rect key="frame" x="397" y="371.5" width="102" height="34.5"/>
                                 <color key="tintColor" systemColor="systemYellowColor"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Start Over" cornerStyle="medium">
@@ -65,17 +65,8 @@
                                     <action selector="startOverButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jdS-bg-KBq"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="infoLight" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dFS-zH-fFF" userLabel="infoButton">
-                                <rect key="frame" x="782.33333333333337" y="20.000000000000004" width="49.666666666666629" height="34.333333333333343"/>
-                                <buttonConfiguration key="configuration" style="plain"/>
-                                <connections>
-                                    <action selector="infoButtonTapped:" destination="sat-l0-hOP" eventType="touchUpInside" id="9t5-0P-kAH"/>
-                                    <action selector="infoButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="JIk-FX-rco"/>
-                                    <segue destination="t2k-mT-lSM" kind="show" id="P06-Os-qoV"/>
-                                </connections>
-                            </button>
                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="30" minValue="0.0" maxValue="100" minimumValueImage="chevron.down" catalog="system" maximumValueImage="chevron.up" translatesAutoresizingMaskIntoConstraints="NO" id="ADO-vr-SYa" userLabel="Slider">
-                                <rect key="frame" x="224" y="173" width="404" height="31"/>
+                                <rect key="frame" x="246" y="193.5" width="404" height="31"/>
                                 <color key="tintColor" systemColor="systemYellowColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="9LB-kl-Lvr"/>
@@ -89,16 +80,16 @@
                                 </connections>
                             </slider>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="pgQ-ih-JwE" userLabel="Round Stack View">
-                                <rect key="frame" x="705" y="356.66666666666669" width="111" height="20.333333333333314"/>
+                                <rect key="frame" x="748.5" y="377.5" width="111.5" height="20.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Round:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L6d-JB-U69">
-                                        <rect key="frame" x="0.0" y="0.0" width="53.666666666666664" height="20.333333333333332"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="54" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Round" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Ta-be-Pee">
-                                        <rect key="frame" x="61.666666666666629" y="0.0" width="49.333333333333343" height="20.333333333333332"/>
+                                        <rect key="frame" x="62" y="0.0" width="49.5" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
@@ -106,7 +97,7 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="aDr-ZU-EmC" userLabel="Target Stack View">
-                                <rect key="frame" x="353.33333333333331" y="30" width="145.33333333333331" height="16"/>
+                                <rect key="frame" x="375.5" y="30" width="145.5" height="16"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Target Value:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vPr-Oy-W7X">
                                         <rect key="frame" x="0.0" y="0.0" width="70" height="16"/>
@@ -115,7 +106,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Target Value" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3ox-aA-gIr">
-                                        <rect key="frame" x="78" y="0.0" width="67.333333333333314" height="16"/>
+                                        <rect key="frame" x="78" y="0.0" width="67.5" height="16"/>
                                         <fontDescription key="fontDescription" name="Impact" family="Impact" pointSize="13"/>
                                         <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
@@ -123,6 +114,17 @@
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemYellowColor"/>
                             </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dFS-zH-fFF" userLabel="infoButton">
+                                <rect key="frame" x="802" y="20" width="74" height="64"/>
+                                <buttonConfiguration key="configuration" style="plain" image="informacion">
+                                    <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="infoButtonTapped:" destination="sat-l0-hOP" eventType="touchUpInside" id="9t5-0P-kAH"/>
+                                    <action selector="infoButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="JIk-FX-rco"/>
+                                    <segue destination="t2k-mT-lSM" kind="presentation" id="P06-Os-qoV"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -130,17 +132,17 @@
                             <constraint firstAttribute="bottom" secondItem="ao2-D2-qI5" secondAttribute="bottom" id="2hG-5I-ucV"/>
                             <constraint firstItem="ufo-SU-iOy" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="36" id="3a1-4B-ZdG"/>
                             <constraint firstItem="MAC-DJ-pEw" firstAttribute="top" secondItem="ADO-vr-SYa" secondAttribute="bottom" constant="34.666666666666657" id="5L7-Md-vu5"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="dFS-zH-fFF" secondAttribute="trailing" constant="20" id="7XW-Ud-kgD"/>
                             <constraint firstItem="ao2-D2-qI5" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="A3A-1e-Jf0"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="ufo-SU-iOy" secondAttribute="bottom" constant="15" id="ISR-zd-QJd"/>
                             <constraint firstItem="4bb-SA-BwX" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="KOX-W4-7ei"/>
+                            <constraint firstItem="dFS-zH-fFF" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="T0f-ty-aJT"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="pgQ-ih-JwE" secondAttribute="bottom" constant="16" id="U7u-Mm-YJZ"/>
                             <constraint firstItem="aDr-ZU-EmC" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="XEw-QD-R55"/>
                             <constraint firstItem="4bb-SA-BwX" firstAttribute="top" secondItem="MAC-DJ-pEw" secondAttribute="bottom" constant="63.333333333333371" id="YbI-o9-tWi"/>
                             <constraint firstItem="ADO-vr-SYa" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="b30-sl-gcp"/>
                             <constraint firstItem="aDr-ZU-EmC" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="30" id="bwZ-QC-18u"/>
-                            <constraint firstItem="dFS-zH-fFF" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="du1-H4-0vC"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="pgQ-ih-JwE" secondAttribute="trailing" constant="36" id="jy2-PG-t1V"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="dFS-zH-fFF" secondAttribute="trailing" constant="20" id="ox1-X0-H3i"/>
                             <constraint firstItem="MAC-DJ-pEw" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="qBl-Dd-Jgg"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="4bb-SA-BwX" secondAttribute="bottom" constant="8" id="upb-mE-vhR"/>
                         </constraints>
@@ -157,29 +159,36 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
                 <exit id="sat-l0-hOP" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="131.69014084507043" y="-28.244274809160306"/>
+            <point key="canvasLocation" x="131.25" y="-28.985507246376812"/>
         </scene>
         <!--Info View Controller-->
         <scene sceneID="n6V-Ae-7VH">
             <objects>
                 <viewController id="t2k-mT-lSM" customClass="InfoViewController" customModule="BullsEye" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ccp-zq-LtB">
-                        <rect key="frame" x="0.0" y="0.0" width="852" height="393"/>
+                        <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="gamecontroller.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="N3N-cT-pfo">
+                                <rect key="frame" x="0.0" y="1" width="896" height="411.5"/>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="11" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cRV-ZR-ULl">
-                                <rect key="frame" x="50" y="50" width="752" height="293"/>
+                                <rect key="frame" x="130" y="70" width="636" height="207"/>
                                 <string key="text">GAME INFO
 
-Welcome to the awesome game of Bull’s Eye where you can win points and fame by dragging a slider. Your goal is to place the slider as close as possible to the target value. The closer you are, the more points you score.
- ENJOY !</string>
-                                <fontDescription key="fontDescription" name="AcademyEngravedLetPlain" family="Academy Engraved LET" pointSize="17"/>
-                                <color key="textColor" systemColor="systemYellowColor"/>
+
+
+
+Welcome to the awesome game of Bull’s Eye where you can win points and fame by dragging a slider. Your goal is to place the slider as close as possible to the target value. The closer you are, the more points you score. 
+ENJOY !</string>
+                                <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="18"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" role="cancel" translatesAutoresizingMaskIntoConstraints="NO" id="CE5-mL-jki">
-                                <rect key="frame" x="392.66666666666669" y="308" width="67" height="35"/>
-                                <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <rect key="frame" x="414.5" y="349" width="67" height="35"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Close" cornerStyle="large">
                                     <backgroundConfiguration key="background">
@@ -187,35 +196,40 @@ Welcome to the awesome game of Bull’s Eye where you can win points and fame by
                                     </backgroundConfiguration>
                                 </buttonConfiguration>
                                 <connections>
-                                    <segue destination="BYZ-38-t0r" kind="show" id="nEU-1V-xZI"/>
+                                    <segue destination="BYZ-38-t0r" kind="presentation" modalTransitionStyle="flipHorizontal" id="nEU-1V-xZI"/>
                                 </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="RZT-oq-6El"/>
-                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" red="0.66660237312316895" green="0.27125367522239685" blue="0.08606826514005661" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="cRV-ZR-ULl" firstAttribute="leading" secondItem="ccp-zq-LtB" secondAttribute="leading" constant="50" id="00Q-oq-wVX"/>
-                            <constraint firstItem="RZT-oq-6El" firstAttribute="bottom" secondItem="cRV-ZR-ULl" secondAttribute="bottom" constant="50" id="Tf5-GN-LIj"/>
-                            <constraint firstItem="cRV-ZR-ULl" firstAttribute="top" secondItem="RZT-oq-6El" secondAttribute="top" constant="50" id="exh-sD-fIT"/>
-                            <constraint firstAttribute="trailing" secondItem="cRV-ZR-ULl" secondAttribute="trailing" constant="50" id="fmC-yp-rNe"/>
-                            <constraint firstItem="CE5-mL-jki" firstAttribute="centerX" secondItem="ccp-zq-LtB" secondAttribute="centerX" id="kbZ-rC-da3"/>
-                            <constraint firstItem="cRV-ZR-ULl" firstAttribute="centerX" secondItem="ccp-zq-LtB" secondAttribute="centerX" id="rVy-JU-DZk"/>
-                            <constraint firstItem="RZT-oq-6El" firstAttribute="bottom" secondItem="CE5-mL-jki" secondAttribute="bottom" constant="50" id="wv8-3L-kAb"/>
+                            <constraint firstItem="cRV-ZR-ULl" firstAttribute="top" secondItem="RZT-oq-6El" secondAttribute="top" constant="70" id="2Hd-ar-kiM"/>
+                            <constraint firstItem="cRV-ZR-ULl" firstAttribute="centerX" secondItem="ccp-zq-LtB" secondAttribute="centerX" id="AvE-5r-W0h"/>
+                            <constraint firstItem="N3N-cT-pfo" firstAttribute="centerX" secondItem="ccp-zq-LtB" secondAttribute="centerX" id="Fav-iA-DAl"/>
+                            <constraint firstItem="N3N-cT-pfo" firstAttribute="leading" secondItem="RZT-oq-6El" secondAttribute="leading" id="Qb0-De-QXq"/>
+                            <constraint firstItem="RZT-oq-6El" firstAttribute="bottom" secondItem="CE5-mL-jki" secondAttribute="bottom" constant="30" id="Qpy-j0-UuJ"/>
+                            <constraint firstItem="cRV-ZR-ULl" firstAttribute="leading" secondItem="RZT-oq-6El" secondAttribute="leading" constant="130" id="SVA-hW-18x"/>
+                            <constraint firstItem="N3N-cT-pfo" firstAttribute="top" secondItem="RZT-oq-6El" secondAttribute="top" id="VQv-mq-gYd"/>
+                            <constraint firstItem="RZT-oq-6El" firstAttribute="trailing" secondItem="cRV-ZR-ULl" secondAttribute="trailing" constant="130" id="WEk-96-7D6"/>
+                            <constraint firstItem="CE5-mL-jki" firstAttribute="centerX" secondItem="ccp-zq-LtB" secondAttribute="centerX" id="hv5-4A-FU1"/>
+                            <constraint firstItem="RZT-oq-6El" firstAttribute="trailing" secondItem="N3N-cT-pfo" secondAttribute="trailing" id="qzJ-uw-N3e"/>
+                            <constraint firstItem="N3N-cT-pfo" firstAttribute="centerY" secondItem="ccp-zq-LtB" secondAttribute="centerY" id="t7y-xS-C5i"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="nBE-8k-3Oo"/>
                     <nil key="simulatedTopBarMetrics"/>
                     <nil key="simulatedBottomBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1wL-h1-ale" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="833" y="-28"/>
+            <point key="canvasLocation" x="905.35714285714278" y="-28.985507246376812"/>
         </scene>
     </scenes>
     <resources>
         <image name="chevron.down" catalog="system" width="128" height="70"/>
         <image name="chevron.up" catalog="system" width="128" height="70"/>
         <image name="dart" width="1181.5" height="1181.5"/>
+        <image name="gamecontroller.fill" catalog="system" width="128" height="79"/>
+        <image name="informacion" width="50" height="50"/>
         <systemColor name="systemGreenColor">
             <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
