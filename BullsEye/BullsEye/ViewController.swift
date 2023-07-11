@@ -43,12 +43,11 @@ class ViewController: UIViewController {
     //MARK: Actions
     @IBAction func startOverButtonTapped(_ sender: UIButton) {
         
-        
-            
+            hitMeButtonOutlet.isEnabled = true
             round = 0
             totalScore = 0
             currentValue = 0
-            
+            startNewRound()
         
     }
     @IBAction func infoButtonTapped(_ sender: UIButton) {
@@ -99,11 +98,14 @@ class ViewController: UIViewController {
         
         round += 1
         
-        if round == 3 {
+        if round == 11 {
             action.isEnabled = false
+            // Dissmis the Hit Me Button for Restart Game
             hitMeButtonOutlet.isEnabled = false
+            
             let action = UIAlertAction(title: "Restart The Game", style: .cancel)
             alert.addAction(action)
+            
         }
     
         
