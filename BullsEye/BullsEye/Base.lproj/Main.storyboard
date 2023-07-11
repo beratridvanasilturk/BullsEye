@@ -20,7 +20,7 @@
                                 <rect key="frame" x="-164.66666666666663" y="-788.66666666666663" width="1181.3333333333333" height="1181.6666666666667"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MAC-DJ-pEw">
-                                <rect key="frame" x="369" y="216.66666666666666" width="114.33333333333331" height="49.666666666666657"/>
+                                <rect key="frame" x="369" y="237.66666666666666" width="114.33333333333331" height="49.666666666666657"/>
                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Hit Me" cornerStyle="capsule">
@@ -35,7 +35,7 @@
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="ufo-SU-iOy" userLabel="Score Stack View">
-                                <rect key="frame" x="95" y="336.66666666666669" width="97.333333333333314" height="20.333333333333314"/>
+                                <rect key="frame" x="35.999999999999993" y="357.66666666666669" width="97.333333333333314" height="20.333333333333314"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Score:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="noM-fW-gzh">
                                         <rect key="frame" x="0.0" y="0.0" width="49" height="20.333333333333332"/>
@@ -52,7 +52,7 @@
                                 </subviews>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4bb-SA-BwX">
-                                <rect key="frame" x="375" y="329.66666666666669" width="102" height="34.333333333333314"/>
+                                <rect key="frame" x="375" y="350.66666666666669" width="102" height="34.333333333333314"/>
                                 <color key="tintColor" systemColor="systemYellowColor"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Start Over" cornerStyle="medium">
@@ -66,15 +66,17 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="infoLight" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dFS-zH-fFF" userLabel="infoButton">
-                                <rect key="frame" x="723.33333333333337" y="20.000000000000004" width="49.666666666666629" height="34.333333333333343"/>
+                                <rect key="frame" x="782.33333333333337" y="20.000000000000004" width="49.666666666666629" height="34.333333333333343"/>
                                 <buttonConfiguration key="configuration" style="plain"/>
                                 <connections>
-                                    <action selector="infoButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="okz-eS-MVv"/>
+                                    <action selector="infoButtonTapped:" destination="sat-l0-hOP" eventType="touchUpInside" id="9t5-0P-kAH"/>
+                                    <action selector="infoButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="JIk-FX-rco"/>
+                                    <segue destination="t2k-mT-lSM" kind="show" id="P06-Os-qoV"/>
                                 </connections>
                             </button>
-                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="30" minValue="0.0" maxValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="ADO-vr-SYa" userLabel="Slider">
-                                <rect key="frame" x="224" y="152" width="404" height="31"/>
-                                <color key="tintColor" systemColor="systemRedColor"/>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="30" minValue="0.0" maxValue="100" minimumValueImage="chevron.down" catalog="system" maximumValueImage="chevron.up" translatesAutoresizingMaskIntoConstraints="NO" id="ADO-vr-SYa" userLabel="Slider">
+                                <rect key="frame" x="224" y="173" width="404" height="31"/>
+                                <color key="tintColor" systemColor="systemYellowColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="9LB-kl-Lvr"/>
                                     <constraint firstAttribute="width" constant="400" id="moU-P6-ktg"/>
@@ -87,7 +89,7 @@
                                 </connections>
                             </slider>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="pgQ-ih-JwE" userLabel="Round Stack View">
-                                <rect key="frame" x="646" y="335.66666666666669" width="111" height="20.333333333333314"/>
+                                <rect key="frame" x="705" y="356.66666666666669" width="111" height="20.333333333333314"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Round:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L6d-JB-U69">
                                         <rect key="frame" x="0.0" y="0.0" width="53.666666666666664" height="20.333333333333332"/>
@@ -143,6 +145,7 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="4bb-SA-BwX" secondAttribute="bottom" constant="8" id="upb-mE-vhR"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="77a-mc-uhq"/>
                     <connections>
                         <outlet property="hitMeButtonOutlet" destination="MAC-DJ-pEw" id="QSy-cW-nhk"/>
                         <outlet property="roundLbl" destination="0Ta-be-Pee" id="0j8-ZY-F6t"/>
@@ -152,11 +155,66 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <exit id="sat-l0-hOP" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="131.69014084507043" y="-28.244274809160306"/>
         </scene>
+        <!--Info View Controller-->
+        <scene sceneID="n6V-Ae-7VH">
+            <objects>
+                <viewController id="t2k-mT-lSM" customClass="InfoViewController" customModule="BullsEye" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ccp-zq-LtB">
+                        <rect key="frame" x="0.0" y="0.0" width="852" height="393"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="11" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cRV-ZR-ULl">
+                                <rect key="frame" x="50" y="50" width="752" height="293"/>
+                                <string key="text">GAME INFO
+
+Welcome to the awesome game of Bull’s Eye where you can win points and fame by dragging a slider. Your goal is to place the slider as close as possible to the target value. The closer you are, the more points you score.
+ ENJOY !</string>
+                                <fontDescription key="fontDescription" name="AcademyEngravedLetPlain" family="Academy Engraved LET" pointSize="17"/>
+                                <color key="textColor" systemColor="systemYellowColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" role="cancel" translatesAutoresizingMaskIntoConstraints="NO" id="CE5-mL-jki">
+                                <rect key="frame" x="392.66666666666669" y="308" width="67" height="35"/>
+                                <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Close" cornerStyle="large">
+                                    <backgroundConfiguration key="background">
+                                        <color key="strokeColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </backgroundConfiguration>
+                                </buttonConfiguration>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="nEU-1V-xZI"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="RZT-oq-6El"/>
+                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="cRV-ZR-ULl" firstAttribute="leading" secondItem="ccp-zq-LtB" secondAttribute="leading" constant="50" id="00Q-oq-wVX"/>
+                            <constraint firstItem="RZT-oq-6El" firstAttribute="bottom" secondItem="cRV-ZR-ULl" secondAttribute="bottom" constant="50" id="Tf5-GN-LIj"/>
+                            <constraint firstItem="cRV-ZR-ULl" firstAttribute="top" secondItem="RZT-oq-6El" secondAttribute="top" constant="50" id="exh-sD-fIT"/>
+                            <constraint firstAttribute="trailing" secondItem="cRV-ZR-ULl" secondAttribute="trailing" constant="50" id="fmC-yp-rNe"/>
+                            <constraint firstItem="CE5-mL-jki" firstAttribute="centerX" secondItem="ccp-zq-LtB" secondAttribute="centerX" id="kbZ-rC-da3"/>
+                            <constraint firstItem="cRV-ZR-ULl" firstAttribute="centerX" secondItem="ccp-zq-LtB" secondAttribute="centerX" id="rVy-JU-DZk"/>
+                            <constraint firstItem="RZT-oq-6El" firstAttribute="bottom" secondItem="CE5-mL-jki" secondAttribute="bottom" constant="50" id="wv8-3L-kAb"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="nBE-8k-3Oo"/>
+                    <nil key="simulatedTopBarMetrics"/>
+                    <nil key="simulatedBottomBarMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1wL-h1-ale" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="833" y="-28"/>
+        </scene>
     </scenes>
     <resources>
+        <image name="chevron.down" catalog="system" width="128" height="70"/>
+        <image name="chevron.up" catalog="system" width="128" height="70"/>
         <image name="dart" width="1181.5" height="1181.5"/>
         <systemColor name="systemGreenColor">
             <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -166,9 +224,6 @@
         </systemColor>
         <systemColor name="systemPurpleColor">
             <color red="0.68627450980392157" green="0.32156862745098042" blue="0.87058823529411766" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="systemRedColor">
-            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemYellowColor">
             <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

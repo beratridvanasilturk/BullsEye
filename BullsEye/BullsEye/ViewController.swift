@@ -51,6 +51,7 @@ class ViewController: UIViewController {
         
     }
     @IBAction func infoButtonTapped(_ sender: UIButton) {
+        
     }
     @IBAction func sliderMoved(_ sender: UISlider) {
         
